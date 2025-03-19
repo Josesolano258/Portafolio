@@ -38,3 +38,44 @@ body {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen dentro del círculo sin deformarla */
 }
+
+.about {
+    background-color: aquamarine;
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+    margin: auto;
+}
+
+.personal-info {
+    background-color: aqua;
+    padding: 15px;
+    margin: auto;
+}
+
+.social-media {
+    background-color: bisque;
+    padding: 15px;
+    margin: auto;
+}
+
+.studies {
+    background-color: burlywood;
+    padding: 15px;
+    margin: auto;
+}
+
+.stack {
+    background-color: cadetblue;
+    padding: 15px;
+    margin: auto;
+}
+
+.view-language {
+    background-color: coral;
+    margin: auto;
+}
+
+.view-language button {
+    text-align: center;
+}
