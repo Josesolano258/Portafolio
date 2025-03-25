@@ -1,3 +1,4 @@
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -5,77 +6,112 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilos del cuerpo */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:#e7e2d1;
-}
-
-.container {
-    width: 1000px;  /* Ancho del CV */
-    background-color: white;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap:20px; /* Espacio entre elementos */
 }
 
+/* Contenedor principal del CV */
+.container {
+    width: 850px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+}
+
+/* Foto de perfil */
 .profile {
+    grid-row: span 2;
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #333;
     overflow: hidden;
+    margin: auto;
 }
 
 .profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen dentro del círculo sin deformarla */
+    object-fit: cover;
 }
 
-.about {
-    background-color: aquamarine;
-    height: 250px;
-    width: 250px;
+/* Secciones generales */
+.section {
     padding: 15px;
-    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Distribución de las secciones específicas */
+.about {
+    grid-column: 2 / 3;
+    text-align: left;
 }
 
 .personal-info {
-    background-color: aqua;
-    padding: 15px;
-    margin: auto;
+    grid-column: 1 / 2;
+    text-align: left;
 }
 
 .social-media {
-    background-color: bisque;
-    padding: 15px;
-    margin: auto;
+    grid-column: 2 / 3;
+    text-align: left;
 }
 
-.studies {
-    background-color: burlywood;
-    padding: 15px;
-    margin: auto;
+.studies, .stack, .view-language {
+    grid-column: 1 / 3;
 }
 
-.stack {
-    background-color: cadetblue;
-    padding: 15px;
-    margin: auto;
-}
-
-.view-language {
-    background-color: coral;
-    margin: auto;
-}
-
+/* Botón de idioma */
 .view-language button {
+    background: #8a2be2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
     text-align: center;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.view-language button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.view-language button:hover {
+    background-color: #6a11cb;
+}
+
+/* Ajustes para centrar y espaciar los textos */
+.information-wrapper, .social-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section h2 {
+    margin-bottom: 5px;
 }
